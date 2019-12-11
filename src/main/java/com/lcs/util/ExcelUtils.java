@@ -1,6 +1,6 @@
 package com.lcs.util;
 
-import app.yzb.exceptions.GlobleException;
+import com.lcs.exception.GlobleException;
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;

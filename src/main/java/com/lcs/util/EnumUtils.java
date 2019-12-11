@@ -1,7 +1,7 @@
 package com.lcs.util;
 
-import app.yzb.enums.DictEnum;
-import org.apache.commons.lang.StringUtils;
+import com.lcs.enums.DictEnum;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Created by wcy on 2018/2/24.

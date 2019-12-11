@@ -1,9 +1,8 @@
 package com.lcs.util;
 
 
-import app.yzb.common.Result;
-import app.yzb.enums.ErrorEnum;
-
+import com.lcs.common.Result;
+import com.lcs.enums.ErrorEnum;
 
 /**
  * Created by lowdad on 18-1-23.
