@@ -45,7 +45,7 @@ public class TestController {
     @RequestMapping("/jiami")
     public void JiamiString(){
 
-        String name = "蓝传胜";
+        String name = "Java程序员";
         String md5Name = MD5String.getMD5(name);
 
         System.out.println(md5Name);
@@ -93,6 +93,35 @@ public class TestController {
         String token="A8B3ABA78654B199087BE94584E989D8";
 
         String result = URLRequest.httpGet(host + url+"?token="+token);
+
+        String str = new String("Welcome-to-Runoob");
+
+        System.out.println("- 分隔符返回值 :" );
+        for (String retval: str.split("-")){
+            System.out.println(retval);
+        }
+
+        System.out.println("");
+        System.out.println("- 分隔符设置分割份数返回值 :" );
+        for (String retval: str.split("-", 1)){
+            System.out.println(retval);
+        }
+
+        System.out.println("");
+        String str2 = new String("www.runoob.com");
+        System.out.println("转义字符返回值 :" );
+        for (String retval: str2.split("\\.", 3)){
+            System.out.println(retval);
+        }
+
+        System.out.println("");
+        String str3 = new String("acount=? and uu =? or n=?");
+        System.out.println("多个分隔符返回值 :" );
+        for (String retval: str3.split("and|or")){
+            System.out.println(retval);
+        }
+
+
         return result;
     }
 }
