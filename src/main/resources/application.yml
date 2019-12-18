@@ -26,8 +26,16 @@ spring:
   jackson:
     serialization:
       write-dates-as-timestamps: true
+  thymeleaf:
+    prefix: classpath:templates/
+  mvc:
+    view:
+      prefix: /templates
+      suffix: .html
+
 mybatis:
   mapper-locations: classpath*:mapper/**.xml
+
 
 img.url.test: ceshi/
 

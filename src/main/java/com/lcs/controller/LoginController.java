@@ -10,6 +10,7 @@ import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
-@RestController
+@Controller
+@RequestMapping("/user")
 public class LoginController {
 
     @RequestMapping("/login")
@@ -39,19 +41,19 @@ public class LoginController {
             model.addAttribute(user);
         } catch (AuthenticationException e) {
             e.printStackTrace();
-            return "账号或密码错误！！！！";
+            //return "账号或密码错误！！！！";
         } catch (AuthorizationException e) {
             e.printStackTrace();
-            return "没有权限！！！！";
+            //return "没有权限！！！！";
         }
-        return "login success";
+        return "index";
     }
     //注解验角色和权限
     @RequiresRoles("admin")
     @RequiresPermissions("add")
     @RequestMapping("/index")
     public String index() {
-        return "index";
+        return "user/login";
     }
 
 

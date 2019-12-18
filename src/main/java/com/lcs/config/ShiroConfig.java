@@ -56,19 +56,26 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         Map<String, String> map = new LinkedHashMap<>();
         //登出
-        map.put("/logout", "logout");
+        map.put("/user/logout", "logout");
         //对所有用户认证
         map.put("/ceshi","anon");
         map.put("/getStatements","anon");
         map.put("/getBalance","anon");
         map.put("/date","anon");
+        map.put("/user/login","anon");
+        map.put("/css/**","anon");
+        map.put("/js/**","anon");
+        map.put("/img/**","anon");
+        map.put("/lib/**","anon");
+        map.put("/index.html","anon");
+        map.put("/login.html","anon");
         map.put("/**", "authc");
         //登录
         shiroFilterFactoryBean.setLoginUrl("/login");
         //首页
         shiroFilterFactoryBean.setSuccessUrl("/index");
         //错误页面，认证不通过跳转
-        shiroFilterFactoryBean.setUnauthorizedUrl("/error");
+        //shiroFilterFactoryBean.setUnauthorizedUrl("/error");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
         return shiroFilterFactoryBean;
     }
