@@ -99,4 +99,6 @@ public class ShiroConfig {
     public ShiroDialect shiroDialect(){
         return new ShiroDialect();
     }
+
+
 }

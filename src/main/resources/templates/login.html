@@ -43,7 +43,7 @@
             return false;
         }
         $.ajax({
-            url: '[[@{/login}]]',
+            url: '[[@{/user/login}]]',
             type: 'post',
             data: {
                 username: username,
@@ -52,7 +52,7 @@
             success: function (response) {
                 if (response.code == 200) {
                     layer.msg(response.msg, {icon: 1, time: 100}, function () {
-                        window.location.href = '[[@{/index}]]';
+                        window.location.href = '[[@{/user/index}]]';
                     });
                 } else {
                     layer.alert(response.msg);

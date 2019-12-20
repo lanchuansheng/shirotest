@@ -48,4 +48,17 @@ public class User {
         this.username = username;
         this.password = password;
     }
+
+    private static User instance = new User();
+
+    private User(){};
+
+    public static User getInstance(){
+        return instance;
+    }
+
+    public void showMessage(){
+        System.out.println("Hello World!");
+    }
+
 }

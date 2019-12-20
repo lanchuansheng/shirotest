@@ -41,10 +41,10 @@ public class LoginController {
             model.addAttribute(user);
         } catch (AuthenticationException e) {
             e.printStackTrace();
-            //return "账号或密码错误！！！！";
+            return "login";
         } catch (AuthorizationException e) {
             e.printStackTrace();
-            //return "没有权限！！！！";
+            return "login";
         }
         return "index";
     }

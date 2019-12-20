@@ -1,5 +1,9 @@
 package com.lcs.service.impl;
 
+import com.lcs.entity.User;
+
+import javax.jws.soap.SOAPBinding;
+
 public class Client {
 
     public static void main(String[] args) {
@@ -11,6 +15,14 @@ public class Client {
 
         //开启控制器对象运行
         emp.doSome();
+        User user = User.getInstance();
+        user.showMessage();
+        System.out.println(user);
+        System.out.println("---------------------");
+        User u = User.getInstance();
+        System.out.println(u);
+
+
     }
 
 }
