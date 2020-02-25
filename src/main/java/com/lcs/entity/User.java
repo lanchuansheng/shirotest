@@ -1,7 +1,9 @@
 package com.lcs.entity;
 
-import java.util.Set;
+import lombok.Data;
 
+import java.util.Set;
+@Data
 public class User {
     private Long id;
 
@@ -11,37 +13,7 @@ public class User {
 
     private Set<Role> roles;
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String user) {
-        this.username = username == null ? null : username.trim();
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
-    }
 
     public User(Long id, String username, String password) {
         this.id = id;
