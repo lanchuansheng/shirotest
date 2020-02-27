@@ -40,3 +40,8 @@ mybatis:
 img.url.test: ceshi/
 
 logging.level.com.lcs.mapper: DEBUG
+ftp:
+  username: root
+  password: 123456
+  ip: 139.129.91.3
+  port: 8080
