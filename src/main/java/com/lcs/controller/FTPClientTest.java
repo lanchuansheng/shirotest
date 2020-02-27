@@ -102,9 +102,7 @@ public class FTPClientTest {
     /**
      * 上传单个文件，并重命名
      *
-     * @param localFile--本地文件路径
-     * @param localRootFile--本地文件父文件夹路径
-     * @param distFolder--新的文件名,可以命名为空""
+     * @param local--本地文件路径
      * @return true 上传成功，false 上传失败
      * @throws IOException
      */
